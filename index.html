@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOC | Centro de Operaciones de Seguridad</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #0b1120;
+      color: #e2e8f0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header, main, footer {
+      max-width: 1000px;
+      margin: auto;
+      padding: 32px 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      border-bottom: 1px solid #25324a;
+    }
+
+    .logo {
+      color: #38bdf8;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .etiqueta {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .portada { padding: 40px 0; }
+
+    .subtitulo {
+      color: #38bdf8;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      margin: 16px 0;
+      font-size: clamp(32px, 6vw, 54px);
+      line-height: 1.15;
+    }
+
+    h2 { font-size: 26px; }
+
+    .descripcion {
+      max-width: 700px;
+      color: #94a3b8;
+      font-size: 18px;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin: 28px 0 48px;
+    }
+
+    .tarjeta, .panel {
+      padding: 24px;
+      background: #131e32;
+      border: 1px solid #25324a;
+      border-radius: 16px;
+    }
+
+    .numero {
+      color: #38bdf8;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .tarjeta h3 { margin-bottom: 8px; }
+    .tarjeta p { color: #94a3b8; }
+
+    .panel {
+      border-left: 4px solid #38bdf8;
+      margin-bottom: 36px;
+    }
+
+    .aviso {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: #263553;
+      color: #bae6fd;
+      font-size: 13px;
+    }
+
+    button {
+      padding: 13px 20px;
+      background: #38bdf8;
+      color: #082032;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover { background: #7dd3fc; }
+
+    button:focus-visible {
+      outline: 3px solid white;
+      outline-offset: 4px;
+    }
+
+    #consejo { min-height: 76px; }
+
+    footer {
+      border-top: 1px solid #25324a;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="logo">SOC / CYBERSECURITY</span>
+    <span class="etiqueta">DevSecOps · Unidad 4</span>
+  </header>
+
+  <main>
+    <section class="portada">
+      <p class="subtitulo">CENTRO DE OPERACIONES DE SEGURIDAD</p>
+      <h1>Monitorear. Detectar.<br>Responder.</h1>
+      <p class="descripcion">
+        Un SOC reúne personas, procesos y tecnología para
+        identificar amenazas y coordinar la respuesta ante
+        incidentes de ciberseguridad.
+      </p>
+    </section>
+
+    <section aria-labelledby="funciones">
+      <h2 id="funciones">Funciones de un SOC</h2>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <span class="numero">01 / MONITOREO</span>
+          <h3>Observar la actividad</h3>
+          <p>
+            Revisar eventos y registros de sistemas, redes
+            y aplicaciones para identificar actividad sospechosa.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">02 / DETECCIÓN</span>
+          <h3>Analizar las alertas</h3>
+          <p>
+            Investigar señales de amenaza, descartar falsos
+            positivos y priorizar los casos según su impacto.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <span class="numero">03 / RESPUESTA</span>
+          <h3>Gestionar incidentes</h3>
+          <p>
+            Coordinar la contención, apoyar la recuperación
+            y documentar las lecciones aprendidas.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="ejemplo">
+      <span class="aviso">Caso ilustrativo · Sin monitoreo real</span>
+      <h2 id="ejemplo">Intentos de acceso sospechosos</h2>
+      <p>
+        Se detectan varios intentos fallidos de inicio de sesión
+        sobre una misma cuenta desde una ubicación inusual.
+      </p>
+      <p>
+        <strong>Análisis:</strong> revisar el origen, los horarios
+        y si hubo un acceso exitoso posterior.
+      </p>
+      <p>
+        <strong>Posible respuesta:</strong> aplicar el procedimiento
+        de protección de cuentas y escalar el caso si se confirma
+        un compromiso.
+      </p>
+    </section>
+
+    <section aria-labelledby="buenas-practicas">
+      <h2 id="buenas-practicas">Buenas prácticas de seguridad</h2>
+      <p id="consejo" aria-live="polite">
+        Activa la autenticación multifactor para proteger tus cuentas.
+      </p>
+      <button id="siguiente" type="button">Ver otro consejo</button>
+    </section>
+  </main>
+
+  <footer>
+    Proyecto académico de ingrzevallosg16 · DevSecOps, Unidad 4<br>
+    Publicación mediante GitHub Actions y GitHub Pages.
+  </footer>
+
+  <script>
+    const consejos = [
+      "Activa la autenticación multifactor para proteger tus cuentas.",
+      "Utiliza contraseñas únicas y un gestor de contraseñas.",
+      "Mantén tus sistemas y aplicaciones actualizados.",
+      "Verifica el remitente y el destino de los enlaces antes de abrirlos.",
+      "Reporta los mensajes sospechosos al equipo de seguridad.",
+      "Realiza copias de seguridad y comprueba su recuperación."
+    ];
+
+    let posicion = 0;
+
+    document.getElementById("siguiente").addEventListener("click", () => {
+      posicion = (posicion + 1) % consejos.length;
+      document.getElementById("consejo").textContent = consejos[posicion];
+    });
+  </script>
+</body>
+</html>
